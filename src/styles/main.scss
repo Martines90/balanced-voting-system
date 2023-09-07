@@ -7,6 +7,8 @@
 // Local imports
 @import "reset";
 
-body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+// https://stackoverflow.com/questions/50817727/change-scrollbar-height
+
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
 }

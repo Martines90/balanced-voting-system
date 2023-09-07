@@ -42,7 +42,7 @@ function App() {
       <CssBaseline />
       <MenuAppBar />
       <Container maxWidth="md" id="app-main">
-        <Box sx={{ bgcolor: '#e6f1f9', height: '100vh' }}>
+        <Box sx={{ bgcolor: '#e6f1f9', minHeight: '100vh', height: 'auto', paddingBottom: '2%',marginBottom: '30px' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="votings" element={<VotingsPage />} />

@@ -8,7 +8,7 @@ function VoteTopicPage() {
         Voting intro
       </Grid>
       <Grid item xs={5} marginLeft={'2%'}>
-        <Grid container rowGap={2} style={{overflowY: 'scroll', direction: 'rtl', maxHeight: '100vh'}}>
+        <Grid container rowGap={2}>
           <Grid item>
           <ArticleIntro
             type='pro'
