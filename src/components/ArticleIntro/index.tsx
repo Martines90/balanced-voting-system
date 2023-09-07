@@ -17,6 +17,7 @@ const CHIP_TAG_COLORS: {[key: string]: string} = {
 
 export default function ArticleIntro({
   type,
+  title,
   avgRating,
   numOfRates,
   authorInfo,
@@ -24,6 +25,7 @@ export default function ArticleIntro({
   tags,
 }: {
   type: string,
+  title: string,
   avgRating: number,
   numOfRates: number,
   authorInfo: any,
@@ -47,15 +49,16 @@ export default function ArticleIntro({
       </CardMedia>
       <CardContent>
         <Stack spacing={1}>
-          <Typography gutterBottom variant="h5" component="div">
-            Article title
+          <Typography gutterBottom variant="h6" component="div">
+            {title}
           </Typography>
           <Grid container alignItems="center" >
             <Grid item>
               <Avatar alt="Author 1" src="/static/images/avatar/1.jpg" />
             </Grid>
-            <Grid style={{marginLeft: '5px'}} item>
-              {`${authorInfo.name} (${authorInfo.title})`}</Grid>
+            <Grid style={{marginLeft: '5px', fontSize: '13px'}} item>
+              {`${authorInfo.name} (${authorInfo.title})`}
+            </Grid>
           </Grid>
           <Typography variant="body2" color="text.secondary">
             Short description bla bla bla bla bla story telling goes on, bla bla bla
