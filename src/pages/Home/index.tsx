@@ -1,10 +1,12 @@
 // Local imports
-import HelloWorld from '../../components/HelloWorld';
+// import HelloWorld from '../../components/HelloWorld';
+import MenuAppBar from '../../components/menu/MenuAppBar';
 
 // Component definition
 function HomePage() {
   return (
-    <HelloWorld
+    <>Home page</>
+    /*<HelloWorld
       box={{
         sx: {
           background: 'rgb(0, 30, 60)',
@@ -14,7 +16,7 @@ function HomePage() {
           alignItems: 'center',
         },
       }}
-    />
+    />*/
   );
 }
 
