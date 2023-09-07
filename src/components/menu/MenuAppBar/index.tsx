@@ -23,7 +23,7 @@ const MenuAppBar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: '#4f565d'}}>
         <Toolbar>
           <IconButton
             size="large"

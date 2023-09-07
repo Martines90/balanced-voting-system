@@ -11,10 +11,13 @@ const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        root: {
+
+        },
         body: {
           ...darkScrollbar(),
           color: 'darkred',
-          backgroundColor: 'grey',
+          backgroundColor: '#f0fbff',
           '& h1': {
             color: 'black',
           },
@@ -23,6 +26,7 @@ const theme = createTheme({
     },
   },
 });
+
 
 // Local imports
 import MenuAppBar from '../components/menu/MenuAppBar';
@@ -37,8 +41,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <MenuAppBar />
-      <Container maxWidth="md">
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
+      <Container maxWidth="md" id="app-main">
+        <Box sx={{ bgcolor: '#e6f1f9', height: '100vh' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="votings" element={<VotingsPage />} />
