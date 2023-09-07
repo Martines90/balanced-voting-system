@@ -29,7 +29,7 @@ import MenuAppBar from '../components/menu/MenuAppBar';
 
 import HomePage from '../pages/Home';
 import VotingsPage from '../pages/Votings';
-import VoteTopicPage from '../pages/Voting';
+import VotingPage from '../pages/Voting';
 
 // Component definition
 function App() {
@@ -42,7 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="votings" element={<VotingsPage />} />
-            <Route path="voting" element={<VoteTopicPage />} />
+            <Route path="voting" element={<VotingPage />} />
           </Routes>
         </Box>
       </Container>
