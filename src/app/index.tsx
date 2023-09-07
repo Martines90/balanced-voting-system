@@ -7,6 +7,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
+// Local imports
+import MenuAppBar from '../components/menu/MenuAppBar';
+
+import HomePage from '../pages/Home';
+import VotingsPage from '../pages/Votings';
+import VotingPage from '../pages/Voting';
+
 const theme = createTheme({
   components: {
     MuiCssBaseline: {
@@ -26,14 +33,6 @@ const theme = createTheme({
     },
   },
 });
-
-
-// Local imports
-import MenuAppBar from '../components/menu/MenuAppBar';
-
-import HomePage from '../pages/Home';
-import VotingsPage from '../pages/Votings';
-import VotingPage from '../pages/Voting';
 
 // Component definition
 function App() {

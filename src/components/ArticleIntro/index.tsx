@@ -6,26 +6,44 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
+
+const CHIP_TAG_COLORS: {[key: string]: string} = {
+  'deep interview': 'rgb(130 245 197)',
+  podcast: '#d26eff',
+  article: 'rgb(110 200 255)',
+  research: 'rgb(255 110 110)',
+  'expert opinion': 'rgb(233 207 56)',
+}
+
 export default function ArticleIntro({
   type,
   avgRating,
-  authorInfo,
   numOfRates,
+  authorInfo,
+  mediaImgSrc,
+  tags,
 }: {
   type: string,
   avgRating: number,
   numOfRates: number,
   authorInfo: any,
+  mediaImgSrc: any,
+  tags: string[],
 }) {
   const borderColor = type === 'pro' ? '#90bf90' : '#ffd1d1'
   return (
     <Card sx={{ maxWidth: '100%', border: `5px solid ${borderColor}` }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={mediaImgSrc}
         title="green iguana"
       >
-        <Chip label="Podcast" style={{backgroundColor:'#d26eff', float: 'right', margin: '5px 5px 0px 0px'}} />
+        {tags.map((tag: string, index) => {
+          return (
+            <Chip key={index} label={tag} style={{backgroundColor: CHIP_TAG_COLORS[tag], float: 'right', margin: '5px 5px 0px 0px'}} />
+            )
+        })}
+
       </CardMedia>
       <CardContent>
         <Stack spacing={1}>
