@@ -13,6 +13,7 @@ import MenuAppBar from '../components/menu/MenuAppBar';
 import HomePage from '../pages/Home';
 import VotingsPage from '../pages/Votings';
 import VotingPage from '../pages/Voting';
+import VoteTopicPage from 'pages/Voting/voting-topic';
 
 const theme = createTheme({
   components: {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="votings" element={<VotingsPage />} />
             <Route path="voting" element={<VotingPage />} />
+            <Route path="voting/voting-topic" element={<VoteTopicPage />} />
           </Routes>
         </Box>
       </Container>

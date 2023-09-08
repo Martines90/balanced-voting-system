@@ -1,15 +1,15 @@
 import { Grid } from '@mui/material';
-import ArticleIntro from '../../components/ArticleIntro';
-import VotingIntro from '../../components/VotingIntro';
+import ArticleIntro from 'components/ArticleIntro';
+import VotingIntro from 'components/Voting/VotingIntro';
 
 //images
-import jobbik_logo from '../../assets/profiles/org/jobbik_logo.png'
-import teacher_img_1 from '../../assets/profiles/author/tanarok-1.jpeg'
-import teacher_img_2 from '../../assets/profiles/author/tanarok-2.jpeg'
-import teacher_img_3 from '../../assets/profiles/author/tanarok-3.jpeg'
-import teacher_img_4 from '../../assets/profiles/author/tanarok-4.jpeg'
+import jobbik_logo from 'assets/profiles/org/jobbik_logo.png'
+import teacher_img_1 from 'assets/profiles/author/tanarok-1.jpeg'
+import teacher_img_2 from 'assets/profiles/author/tanarok-2.jpeg'
+import teacher_img_3 from 'assets/profiles/author/tanarok-3.jpeg'
+import teacher_img_4 from 'assets/profiles/author/tanarok-4.jpeg'
 
-function VoteTopicPage() {
+function VotingPage() {
   return (
     <Grid container rowGap={2} justifyContent='space-between'>
       <Grid item xs={12}>
@@ -96,4 +96,4 @@ function VoteTopicPage() {
   );
 }
 
-export default VoteTopicPage;
+export default VotingPage;
