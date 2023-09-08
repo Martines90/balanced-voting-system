@@ -12,7 +12,6 @@ const QuizEnabledCountDown = (
       if (completed) {
         // Render a completed state
         setCheckAnswersEnabled(true)
-        return <span>Checking answers will be enabled in 0 min and 0 sec</span>;
       } else {
         return <span>Checking answers will be enabled in {minutes} min and {seconds} sec</span>;
       }
