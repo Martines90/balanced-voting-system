@@ -1,11 +1,14 @@
-import { Grid } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
+import VotingPool from 'components/Voting/VotingPool';
 
 function VotingsPage() {
   return (
-    <Grid container>
-      <Grid item xs={12}>Vote topics 1</Grid>
-      <Grid item xs={12}>Vote topics 2</Grid>
-    </Grid>
+    <Stack spacing={2} color={'black'} padding={'20px'}>
+      <Typography gutterBottom variant="h5" component="div">
+            Votings
+      </Typography>
+      <VotingPool />
+    </Stack>
   );
 }
 

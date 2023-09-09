@@ -41,7 +41,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <MenuAppBar />
-      <Container maxWidth="md" id="app-main">
+      <Container maxWidth="lg" id="app-main">
         <Box sx={{ bgcolor: '#e6f1f9', minHeight: '100vh', height: 'auto', paddingBottom: '2%',marginBottom: '30px' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
