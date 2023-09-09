@@ -17,7 +17,6 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import QuizEnabledCountDown from 'components/common/CountDown';
@@ -40,7 +39,7 @@ const HeaderInfo = ({ orgInfo }: { orgInfo: any }) => {
           Title:
         </Grid>
         <Grid item xs={12} >
-          Would you raise the salary of the teachers and social workers by 10%?
+          10% wage raise for the teachers
         </Grid>
       </Grid>
   );

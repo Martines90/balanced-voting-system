@@ -54,10 +54,10 @@ export default function ArticleIntro({
           </Typography>
           <Grid container alignItems="center" >
             <Grid item>
-              <Avatar alt="Author 1" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="Author 1" src={authorInfo.avatarPics} />
             </Grid>
             <Grid style={{marginLeft: '5px', fontSize: '13px'}} item>
-              {`${authorInfo.name} (${authorInfo.title})`}
+              {`${authorInfo.name}`}<br/>{`(${authorInfo.title})`}
             </Grid>
           </Grid>
           <Typography variant="body2" color="text.secondary">
@@ -74,8 +74,7 @@ export default function ArticleIntro({
         </Stack>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Read</Button>
+        <Button size="small">Read & Complete</Button>
       </CardActions>
     </Card>
   );
