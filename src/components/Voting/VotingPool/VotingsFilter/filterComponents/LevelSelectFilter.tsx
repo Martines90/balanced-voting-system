@@ -47,10 +47,9 @@ function getStyles(level: string, selectedLevel: readonly string[], theme: Theme
   const theme = useTheme();
 
   const handleChange = (e: any) => {
-    console.log('e.target.value:', e.target.value )
     setFiltersState({
       ...filtersState,
-      levels: filtersState.levels.filter((level: string) => (e.target.value.includes(level))),
+      levels: levels.filter((level) => e.target.value.includes(level)),
     })
   };
 

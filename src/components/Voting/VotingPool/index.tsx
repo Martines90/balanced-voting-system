@@ -149,6 +149,7 @@ export default function VotingPool() {
       closed: false,
     },
     levels: ['country', 'county', 'city'],
+    locationName: '',
   })
 
   return (
@@ -161,7 +162,13 @@ export default function VotingPool() {
     </VotingsPoolFilterContext.Provider>
     <Box sx={{ height: 400, width: '100%', backgroundColor: '#ffffff' }}>
       <StripedDataGrid
-        rows={rows.filter((row) => !!filtersState.status[row.status as  keyof typeof filtersState.status])}
+        rows={
+          rows.filter((row) => (
+            filtersState.status[row.status as  keyof typeof filtersState.status] &&
+            filtersState.levels.includes(row.level) &&
+            (filtersState.locationName !== '' ? row.location.toLowerCase().includes(filtersState.locationName.toLowerCase()) : true)
+          ))
+        }
         columns={columns}
         initialState={{
           pagination: {
