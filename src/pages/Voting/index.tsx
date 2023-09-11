@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid';
-import ArticleIntro from 'components/ArticleIntro';
+import ArticleIntro from 'components/articles/ArticleIntro';
 import VotingIntro from 'components/Voting/VotingIntro';
 
 //images

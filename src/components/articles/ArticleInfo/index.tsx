@@ -25,23 +25,23 @@ import QuizEnabledCountDown from 'components/common/CountDown';
 
 
 
-const HeaderInfo = ({ orgInfo }: { orgInfo: any }) => {
+const HeaderInfo = ({ authorInfo }: { authorInfo: any }) => {
   return (
       <Grid container alignItems="center" >
         <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
-          Voting subject initiated by:
+          Written by:
         </Grid>
         <Grid item>
-          {`${orgInfo.name} (${orgInfo.profile})`}
+          {`${authorInfo.name} (${authorInfo.profile})`}
         </Grid>
         <Grid style={{marginLeft: '5px'}} item>
-          <Avatar alt="Author 1" src={orgInfo.logoUrl} />
+          <Avatar alt="Author 1" src={authorInfo.profile_pics} />
         </Grid>
         <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
           Title:
         </Grid>
         <Grid item xs={12} >
-          10% wage raise for the teachers
+          [Title of the pro/contra article]
         </Grid>
       </Grid>
   );
@@ -133,9 +133,6 @@ const ContentInfo = () => {
             <MockTextBlock />
           </Typography>
         </Grid>
-        <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
-          Numbers:
-        </Grid>
         <Grid item xs={12} >
           <Typography variant="body2" color="text.secondary" component={'div'}>
             <MockChartData1 />
@@ -152,7 +149,7 @@ const ContentUnderstandingValidationTest = () => {
   return (
     <Grid container alignItems="center" >
         <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
-          VCU (voting content understanding) quiz:
+          ACU (article content understanding) quiz:
         </Grid>
         <Grid item xs={12} >
           <Quiz />
@@ -166,39 +163,24 @@ const Quiz = () => {
   const quizSettings = {
     questions: [
       {
-        question: 'What percentage Jobbik want to increase teachers salary?',
-        options: ['5%', '8%', '20%', '10%'],
-        correctAnswer: '10%',
+        question: '[Question 1 about related to the content of the article]?',
+        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
       },
       {
-        question: 'Roughly how many teachers are affected by this raise?',
-        options: ['200 thousand', '150 thousand', '55 thousand', '130 thousand'],
-        correctAnswer: '130 thousand',
+        question: '[Question 2 about related to the content of the article]?',
+        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
       },
       {
-        question: 'What is the maximum gross salary a primary school teacher can have after 15 years of work?',
-        options: ['158 000', '274 000', '480 000', '322 000'],
-        correctAnswer: '322 000',
+        question: '[Question 3 about related to the content of the article]?',
+        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
       },
       {
-        question: 'What is the forecasted teacher shortage we face in 2024?',
-        options: ['40 0000', '22 000', '34 000', '81 000'],
-        correctAnswer: '22 000',
+        question: '[Question 4 about related to the content of the article]?',
+        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
       },
       {
-        question: 'Compared to average gross wage, teachers earn less or more in average?',
-        options: ['less', 'more', 'almost equal'],
-        correctAnswer: 'less',
-      },
-      {
-        question: 'How many hours a day a high school teacher works if extra non work related activites incloded?',
-        options: ['8', '6', '9', '12'],
-        correctAnswer: '12',
-      },
-      {
-        question: 'How earns the less?',
-        options: ['janitor', 'teacher', 'mechanican', 'operator'],
-        correctAnswer: 'teacher',
+        question: '[Question 5 about related to the content of the article]?',
+        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
       },
     ],
   }
@@ -279,16 +261,16 @@ const QuizBlock = ({
   );
 }
 
-export default function VotingInfo({
-  orgInfo,
+export default function ArticleInfo({
+  authorInfo,
 }: {
-  orgInfo: any,
+  authorInfo: any,
 }) {
   return (
     <Card sx={{ maxWidth: '100%', margin: '2% 2% 0px' }}>
       <CardContent>
         <Stack spacing={1}>
-          <HeaderInfo orgInfo={orgInfo} />
+          <HeaderInfo authorInfo={authorInfo} />
           <ContentInfo />
           <ContentUnderstandingValidationTest />
         </Stack>

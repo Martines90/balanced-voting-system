@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
 const CHIP_TAG_COLORS: {[key: string]: string} = {
@@ -74,7 +75,7 @@ export default function ArticleIntro({
         </Stack>
       </CardContent>
       <CardActions>
-        <Button size="small">Read & Complete</Button>
+        <Button component={Link} to={'/article'} size="small" >Read & Complete</Button>
       </CardActions>
     </Card>
   );
