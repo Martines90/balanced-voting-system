@@ -2,12 +2,15 @@ import Box from '@mui/material/Box';
 import { DataGrid, GridCellParams, GridColDef, gridClasses } from '@mui/x-data-grid';
 
 import { alpha, styled } from '@mui/material/styles';
-import { Button, Paper, Stack } from '@mui/material';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { useState, createContext } from 'react';
 import VotingsFilter from './VotingsFilter';
+import votings_data from './data/votings_mock';
 
 export const VotingsPoolFilterContext = createContext({} as any);
 
@@ -74,8 +77,8 @@ const columns: GridColDef[] = [
     },
   },
   {
-    field: 'category',
-    headerName: 'Category',
+    field: 'subject',
+    headerName: 'subject',
     type: 'string',
     width: 100,
   },
@@ -135,11 +138,9 @@ const columns: GridColDef[] = [
   },
 ];
 
-const rows = [
-  { id: '1934533', status: 'active', category: 'education', title: '10% wage raise for the teachers', initiated_by: 'Jobbik (political party)', level: 'country', location: 'Hungary', start_date: new Date('2023.07.12'), end_date: new Date('2023.07.31') },
-  { id: '1934532', status: 'upcoming', category: 'education', title: '10% wage raise for the teachers', initiated_by: 'Jobbik (political party)', level: 'country', location: 'Hungary', start_date: new Date('2023.07.12'), end_date: new Date('2023.07.31') },
-  { id: '1934531', status: 'closed', category: 'education', title: '10% wage raise for the teachers', initiated_by: 'Jobbik (political party)', level: 'country', location: 'Hungary', start_date: new Date('2023.07.12'), end_date: new Date('2023.07.31') },
-];
+const rows = votings_data;
+
+
 
 export default function VotingPool() {
   const [filtersState, setFiltersState] = useState({

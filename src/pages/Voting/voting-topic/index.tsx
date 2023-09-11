@@ -1,7 +1,7 @@
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 //images
-import jobbik_logo from 'assets/profiles/org/jobbik_logo.png'
+import dk_logo from 'assets/profiles/org/dklogo.png'
 import VotingInfo from 'components/Voting/VotingInfo';
 
 function VoteTopicPage() {
@@ -10,9 +10,9 @@ function VoteTopicPage() {
       <Grid item xs={12}>
         <VotingInfo
           orgInfo={{
-            name: 'Jobbik',
+            name: 'DK',
             profile: 'political party',
-            logoUrl: jobbik_logo,
+            logoUrl: dk_logo,
           }}
         />
       </Grid>

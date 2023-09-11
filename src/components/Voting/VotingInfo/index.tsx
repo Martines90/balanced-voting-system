@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 
-import { Avatar, Grid, Stack } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';

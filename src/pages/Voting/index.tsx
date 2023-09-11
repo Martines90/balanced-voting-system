@@ -1,9 +1,9 @@
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import ArticleIntro from 'components/ArticleIntro';
 import VotingIntro from 'components/Voting/VotingIntro';
 
 //images
-import jobbik_logo from 'assets/profiles/org/jobbik_logo.png'
+import dk_logo from 'assets/profiles/org/dklogo.png'
 import teacher_img_1 from 'assets/profiles/author/tanarok-1.jpeg'
 import teacher_img_2 from 'assets/profiles/author/tanarok-2.jpeg'
 import teacher_img_3 from 'assets/profiles/author/tanarok-3.jpeg'
@@ -24,9 +24,9 @@ function VotingPage() {
       <Grid item xs={12}>
         <VotingIntro
           orgInfo={{
-            name: 'Jobbik',
+            name: 'DK',
             profile: 'political party',
-            logoUrl: jobbik_logo,
+            logoUrl: dk_logo,
           }}
         />
       </Grid>
