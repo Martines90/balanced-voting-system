@@ -8,11 +8,11 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 // Local imports
-import MenuAppBar from '../components/menu/MenuAppBar';
+import MenuAppBar from 'components/menu/MenuAppBar';
 
-import HomePage from '../pages/Home';
-import VotingsPage from '../pages/Votings';
-import VotingPage from '../pages/Voting';
+import HomePage from 'pages/Home';
+import VotingsPage from 'pages/Votings';
+import VotingPage from 'pages/Voting';
 import VoteTopicPage from 'pages/Voting/voting-topic';
 import ArticlePage from 'pages/Article';
 
