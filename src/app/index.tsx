@@ -25,7 +25,7 @@ const theme = createTheme({
         },
         body: {
           ...darkScrollbar(),
-          color: 'darkred',
+          // color: 'darkred',
           backgroundColor: '#f0fbff',
           '& h1': {
             color: 'black',
