@@ -17,19 +17,19 @@ import HowToVoteIcon from '@mui/icons-material/HowToVote';
 
 const pages = [
   {
-    text: 'votings',
+    text: 'voting pool (example)',
     href: '/votings',
   },
   {
-    text: 'voting',
+    text: 'voting (example)',
     href: '/voting',
   },
   {
-    text: 'voting info',
+    text: 'voting info (example)',
     href: '/voting/voting-topic',
   },
   {
-    text: 'article',
+    text: 'article (example)',
     href: '/article',
   },
 ]
@@ -74,7 +74,7 @@ function MenuAppBar() {
               textDecoration: 'none',
             }}
           >
-            BVS
+            BVS (demo 1.0)
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
