@@ -13,7 +13,7 @@ function HomePage() {
       <EmojiPeopleIcon fontSize='inherit' color='error' />≠<EmojiPeopleIcon fontSize='inherit' color='success' />
     </Typography>
     <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
-      {`Maybe at first hearing this idea sounds unfair... but I have to say the "one vote equals everyone's vote" scheme is the most
+      {`Maybe at first hearing this idea sounds unfair... but I have to say the "everyone's vote is equal" scheme is the most
        unequal concept that has ever existed on Earth. This idea is completely against equality and this old and toxic concept is the reason why the 99%
        has to rely blindly on their decision makers' dictated direction without having any chance to change this direction. And the root cause of
        this problem is simply the misunderstanding of the idea of voting.`}
