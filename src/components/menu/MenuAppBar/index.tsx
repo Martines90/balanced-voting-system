@@ -26,7 +26,7 @@ const pages = [
   },
   {
     text: 'voting info (example)',
-    href: '/voting-topics',
+    href: '/voting-topic',
   },
   {
     text: 'article (example)',
@@ -122,7 +122,7 @@ function MenuAppBar() {
                 </MenuItem>
                 <MenuItem key={'voting-topic'} onClick={handleCloseNavMenu}>
                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link href="/voting-topics" underline="none" color="inherit">
+                    <Link href="/voting-topic" underline="none" color="inherit">
                       [Voting info]
                     </Link>
                   </Typography>

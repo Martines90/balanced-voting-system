@@ -28,7 +28,7 @@ export default function VotingIntro({
                 style={{minWidth: '150px'}}
                 variant="contained"
                 size="large"
-                component={Link} to="/voting-topics"
+                component={Link} to="/voting-topic"
               >
                 {'Read & Complete >>'}
               </Button>
