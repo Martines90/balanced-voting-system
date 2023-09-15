@@ -15,6 +15,7 @@ import VotingsPage from 'pages/Votings';
 import VotingPage from 'pages/Voting';
 import VoteTopicPage from 'pages/VotingTopic';
 import ArticlePage from 'pages/Article';
+import ScrollToTop from 'helpers/ScrollToTop';
 
 const theme = createTheme({
   components: {
@@ -53,6 +54,7 @@ function App() {
           </Routes>
         </Box>
       </Container>
+      <ScrollToTop />
     </ThemeProvider>
   );
 }
