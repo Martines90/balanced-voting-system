@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -7,14 +7,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-import { BarPlot } from '@mui/x-charts/BarChart';
-import { LinePlot } from '@mui/x-charts/LineChart';
-import { ChartContainer } from '@mui/x-charts/ChartContainer';
-import { AllSeriesType } from '@mui/x-charts/models';
-import { ChartsXAxis } from '@mui/x-charts/ChartsXAxis';
-import { ChartsYAxis } from '@mui/x-charts/ChartsYAxis';
-
-
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -22,8 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import QuizEnabledCountDown from 'components/common/CountDown';
-
-
+import MockChartData from 'components/common/ChartData';
 
 const HeaderInfo = ({ authorInfo }: { authorInfo: any }) => {
   return (
@@ -35,84 +26,16 @@ const HeaderInfo = ({ authorInfo }: { authorInfo: any }) => {
           {`${authorInfo.name} (${authorInfo.profile})`}
         </Grid>
         <Grid style={{marginLeft: '5px'}} item>
-          <Avatar alt="Author 1" src={authorInfo.profile_pics} />
+          <Avatar alt="Author 1" sx={{ width: 54, height: 54 }} src={authorInfo.profile_pics} />
         </Grid>
         <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
           Title:
         </Grid>
         <Grid item xs={12} >
-          [Title of the pro/contra article]
+          The Imperative of Raising Teacher Salaries: Investing in Our Future
         </Grid>
       </Grid>
   );
-}
-
-const MockTextBlock = () => {
-  return (
-    <>
-    {// eslint-disable-next-line max-len
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    }
-    </>
-  )
-}
-
-const MockChartData1 = () => {
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
-
-  const series = [
-    {
-      type: 'bar',
-      stack: '',
-      yAxisKey: 'eco',
-      data: [2, 5, 3, 4, 1],
-    },
-    {
-      type: 'bar',
-      stack: '',
-      yAxisKey: 'eco',
-      data: [5, 6, 2, 8, 9],
-    },
-    {
-      type: 'line',
-      yAxisKey: 'pib',
-      color: 'red',
-      data: [1000, 1500, 3000, 5000, 10000],
-    },
-  ] as AllSeriesType[];
-
-  return (
-    <ChartContainer
-      series={series}
-      width={windowSize.current[0] / 2}
-      height={500}
-      xAxis={[
-        {
-          id: 'years',
-          data: [2019, 2020, 2021, 2022, 2023],
-          scaleType: 'band',
-          valueFormatter: (value) => value.toString(),
-        },
-      ]}
-      yAxis={[
-        {
-          id: 'eco',
-          scaleType: 'linear',
-        },
-        {
-          id: 'pib',
-          scaleType: 'log',
-        },
-      ]}
-    >
-      <BarPlot />
-      <LinePlot />
-      <ChartsXAxis label="Years" position="bottom" axisId="years" />
-      <ChartsYAxis label="Gov spending on other fields" position="left" axisId="eco" />
-      <ChartsYAxis label="PIB" position="right" axisId="pib" />
-    </ChartContainer>
-  );
-
 }
 
 const ContentInfo = () => {
@@ -123,21 +46,49 @@ const ContentInfo = () => {
         </Grid>
         <Grid item xs={12} >
           <Typography variant="body2" color="text.secondary" component={'div'}>
-            <MockTextBlock />
+            {'Teachers play a pivotal role in shaping the future of our society. They are the architects of knowledge, guiding students through the labyrinth of learning, and imparting the skills and wisdom necessary for personal and societal growth. Yet, despite their indispensable contribution to our communities, teachers are often undervalued and undercompensated. In this article, we will explore the compelling reasons why teachers deserve a salary raise. By investing in educators, we are ultimately investing in a brighter future for all.'}
             <br/><br/>
-            <MockTextBlock />
-            <MockTextBlock />
-            <MockTextBlock />
+            {'1. Attracting and Retaining Quality Educators'}
             <br/><br/>
-            <MockTextBlock />
-            <MockTextBlock />
+            {'One of the most compelling arguments for raising teacher salaries is the need to attract and retain high-quality educators. A competitive salary not only entices talented individuals to enter the teaching profession but also encourages experienced teachers to stay in the field. When teachers are paid what they deserve, they are more likely to commit to a long-term career in education, benefiting students who benefit from their experience and dedication.'}
+            <br/><br/>
+            {'According to the National Center for Education Statistics, nearly 44% of new teachers leave the profession within the first five years. Often, this attrition is due to financial pressures. By offering higher salaries, we can reduce this churn rate and ensure that our education system benefits from the wisdom and expertise of seasoned teachers.'}
+            <br/><br/>
+            {'2. Motivation and Job Satisfaction'}
+            <br/><br/>
+            {'Just like any other profession, job satisfaction and motivation are essential for teachers. When educators feel valued and adequately compensated, they are more likely to be enthusiastic and dedicated in the classroom. Higher salaries can serve as a motivational factor, encouraging teachers to continually improve their teaching methods and invest in professional development.'}
+            <br/><br/>
+            {'Moreover, motivated and satisfied teachers create a positive learning environment that fosters student success. When teachers feel financially secure, they can focus more on their teaching duties and less on financial stressors, resulting in better outcomes for students.'}
+            <br/><br/>
+            {'3. Elevating the Status of the Teaching Profession'}
+            <br/><br/>
+            {'Society often measures the value of a profession by the salaries it offers. When teachers are underpaid, it sends a message that their work is undervalued. This perception can deter talented individuals from pursuing a career in education. By increasing teacher salaries, we send a clear message that teaching is a respected and vital profession.'}
+            <br/><br/>
+            {'Elevating the status of the teaching profession has several positive consequences. It encourages more talented individuals to choose teaching as a career, resulting in a more diverse pool of educators. Additionally, it can change the public perception of teachers, leading to greater support for education initiatives and policies.'}
+            <br/><br/>
+            {'4. Reducing Financial Stress'}
+            <br/><br/>
+            {'Teaching is a demanding profession that often requires educators to work beyond regular school hours. Despite this dedication, many teachers struggle to make ends meet due to low salaries. A raise in teacher salaries can alleviate financial stress and allow teachers to focus more on their students and less on their financial burdens.'}
+            <br/><br/>
+            {'Reducing financial stress is not only beneficial for teachers but also for the education system as a whole. Teachers who are less worried about their finances are more likely to be mentally and emotionally available for their students. They can also invest in classroom supplies and resources, ultimately improving the quality of education.'}
           </Typography>
         </Grid>
         <Grid item xs={12} >
           <Typography variant="body2" color="text.secondary" component={'div'}>
-            <MockChartData1 />
+            <MockChartData />
             <br/><br/>
-            <MockTextBlock />
+            {'5. Keeping Pace with Inflation'}
+            <br/><br/>
+            {'Over time, inflation erodes the real value of salaries. Teachers who have been in the profession for many years may find that their purchasing power has diminished. By regularly increasing teacher salaries to keep pace with inflation, we ensure that educators can maintain a decent standard of living. This not only honors their dedication but also helps them to continue serving their students effectively.'}
+            <br/><br/>
+            {'6. Investing in the Future'}
+            <br/><br/>
+            {'A well-funded and adequately staffed education system is an investment in the future. Quality education empowers individuals to reach their full potential, contributes to a skilled and competitive workforce, and strengthens the overall economy. By raising teacher salaries, we invest in the education system\'s stability and sustainability, ensuring that students receive the best possible education.'}
+            <br/><br/>
+            <br/><br/>
+            {'Conclusion'}
+            <br/><br/>
+            {'Raising teacher salaries is not merely an act of generosity; it is an investment in our future. Quality education is the cornerstone of progress and prosperity, and teachers are the pillars upon which it is built. By offering competitive salaries to educators, we can attract and retain the best talent, elevate the status of the teaching profession, and ultimately provide a brighter future for our students and society as a whole. It\'s time to recognize the invaluable contributions of teachers and ensure they are compensated accordingly.'}
           </Typography>
         </Grid>
     </Grid>
@@ -163,24 +114,46 @@ const Quiz = () => {
   const quizSettings = {
     questions: [
       {
-        question: '[Question 1 about related to the content of the article]?',
-        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
+        question: 'Why is attracting and retaining quality educators important for the education system?',
+        options: [
+          'a) To reduce the number of students in each classroom',
+          'b) To improve the quality of school facilities',
+          'c) To ensure students benefit from experienced and dedicated teachers',
+          'd) To increase the number of administrative staff',
+        ],
       },
       {
-        question: '[Question 2 about related to the content of the article]?',
-        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
+        question: 'How can higher teacher salaries contribute to job satisfaction and motivation?',
+        options: [
+          'a) By reducing the number of hours teachers work',
+          'b) By providing more vacation days',
+          'c) By alleviating financial stress and recognizing their value',
+          'd) By assigning fewer responsibilities to teachers',
+        ],
       },
       {
-        question: '[Question 3 about related to the content of the article]?',
-        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
+        question: 'What is the significance of elevating the status of the teaching profession?',
+        options: [
+          'a) It encourages more teachers to take extended vacations',
+          'b) It discourages talented individuals from entering the profession',
+          'c) It sends a message that teaching is respected and important',
+          'd) It decreases public support for education initiatives'],
       },
       {
-        question: '[Question 4 about related to the content of the article]?',
-        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
+        question: 'How does keeping pace with inflation benefit teachers?',
+        options: [
+          'a) It helps them retire earlier',
+          'b) It allows them to purchase luxury items',
+          'c) It maintains their purchasing power and standard of living',
+          'd) It increases their workload'],
       },
       {
-        question: '[Question 5 about related to the content of the article]?',
-        options: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
+        question: 'What is the relationship between teacher salaries and student outcomes?',
+        options: [
+          'a) There is no correlation between teacher salaries and student outcomes',
+          'b) Higher teacher salaries lead to worse student outcomes',
+          'c) Higher teacher salaries result in better teaching methods and improved student outcomes',
+          'd) Teacher salaries only affect student behavior, not academic performance'],
       },
     ],
   }

@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 
 //images
-import profile_pics from 'assets/profiles/author/avatar5.png'
+import profile_pics from 'assets/profiles/author/avatar6.png'
 import ArticleInfo from 'components/articles/ArticleInfo';
 
 export default function ArticlePage() {
@@ -10,9 +10,9 @@ export default function ArticlePage() {
       <Grid item xs={12}>
         <ArticleInfo
           authorInfo={{
-            name: '[AUTHOR_NAME]',
-            profile: '[AUTHOR_TITLE]',
-            logoUrl: profile_pics,
+            name: 'Silvia Bukowski',
+            profile: 'Journalist - independendt',
+            profile_pics: profile_pics,
           }}
         />
       </Grid>

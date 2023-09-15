@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -7,14 +7,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-import { BarPlot } from '@mui/x-charts/BarChart';
-import { LinePlot } from '@mui/x-charts/LineChart';
-import { ChartContainer } from '@mui/x-charts/ChartContainer';
-import { AllSeriesType } from '@mui/x-charts/models';
-import { ChartsXAxis } from '@mui/x-charts/ChartsXAxis';
-import { ChartsYAxis } from '@mui/x-charts/ChartsYAxis';
-
-
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -22,6 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import QuizEnabledCountDown from 'components/common/CountDown';
+import MockChartData from 'components/common/ChartData';
 
 
 
@@ -41,78 +34,10 @@ const HeaderInfo = ({ orgInfo }: { orgInfo: any }) => {
           Title:
         </Grid>
         <Grid item xs={12} >
-          10% wage raise for the teachers
+          Draft Legislation: The Teacher Salary Enhancement Act
         </Grid>
       </Grid>
   );
-}
-
-const MockTextBlock = () => {
-  return (
-    <>
-    {// eslint-disable-next-line max-len
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    }
-    </>
-  )
-}
-
-const MockChartData1 = () => {
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
-
-  const series = [
-    {
-      type: 'bar',
-      stack: '',
-      yAxisKey: 'eco',
-      data: [2, 5, 3, 4, 1],
-    },
-    {
-      type: 'bar',
-      stack: '',
-      yAxisKey: 'eco',
-      data: [5, 6, 2, 8, 9],
-    },
-    {
-      type: 'line',
-      yAxisKey: 'pib',
-      color: 'red',
-      data: [1000, 1500, 3000, 5000, 10000],
-    },
-  ] as AllSeriesType[];
-
-  return (
-    <ChartContainer
-      series={series}
-      width={windowSize.current[0] / 2}
-      height={500}
-      xAxis={[
-        {
-          id: 'years',
-          data: [2019, 2020, 2021, 2022, 2023],
-          scaleType: 'band',
-          valueFormatter: (value) => value.toString(),
-        },
-      ]}
-      yAxis={[
-        {
-          id: 'eco',
-          scaleType: 'linear',
-        },
-        {
-          id: 'pib',
-          scaleType: 'log',
-        },
-      ]}
-    >
-      <BarPlot />
-      <LinePlot />
-      <ChartsXAxis label="Years" position="bottom" axisId="years" />
-      <ChartsYAxis label="Gov spending on other fields" position="left" axisId="eco" />
-      <ChartsYAxis label="PIB" position="right" axisId="pib" />
-    </ChartContainer>
-  );
-
 }
 
 const ContentInfo = () => {
@@ -122,15 +47,59 @@ const ContentInfo = () => {
           Descrition:
         </Grid>
         <Grid item xs={12} >
+
+          <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 1: Purpose and Intent**
+          </Typography>
           <Typography variant="body2" color="text.secondary" component={'div'}>
-            <MockTextBlock />
+            {'This legislation, known as the Teacher Salary Enhancement Act, is enacted with the primary purpose of providing a fair and transparent mechanism for eligible teachers to receive a 10% salary raise. Recognizing the invaluable contribution of educators to society, this act seeks to improve teacher compensation and job satisfaction, ultimately benefiting the quality of education provided to students.'}
             <br/><br/>
-            <MockTextBlock />
-            <MockTextBlock />
-            <MockTextBlock />
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 2: Eligibility Criteria**
+          </Typography>
+            <br/>
+            {'To be eligible for the 10% salary raise, a teacher must meet the following criteria:'}
             <br/><br/>
-            <MockTextBlock />
-            <MockTextBlock />
+            {'a) Hold a valid teaching certificate or license issued by the state or relevant educational authority.'}
+            <br/><br/>
+            {'b) Be employed as a full-time teacher in a public or accredited private school, kindergarten through grade 12 (K-12).'}
+            <br/><br/>
+            {'c) Have completed a minimum of five years of continuous service as a teacher in the same school district or educational institution.'}
+            <br/><br/>
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+              **Section 3: Application Process**
+            </Typography>
+            <br/>
+            {'Eligible teachers seeking the 10% salary raise must follow a clear and straightforward application process:'}
+            <br/><br/>
+            {'a) Teachers shall submit a written application to their respective school district or educational institution\'s human resources department.'}
+            <br/><br/>
+            {'b) The application shall include evidence of the teacher\'s qualifications and years of service, such as teaching certificates, licenses, and employment records.'}
+            <br/><br/>
+            {'c) The school district or educational institution shall establish a designated committee responsible for reviewing and verifying teacher eligibility.'}
+            <br/><br/>
+            {'d) The designated committee shall evaluate applications within 30 days of submission and notify teachers of the outcome.'}
+            <br/><br/>
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 4: Funding Allocation**
+            </Typography>
+            <br/>
+            {'Funding for the 10% salary raise shall be allocated from the state\'s education budget, ensuring that it does not adversely affect other critical education programs. The state\'s Department of Education shall oversee the distribution of funds to eligible school districts and educational institutions.'}
+            <br/><br/>
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 5: Implementation and Timeline**
+            </Typography>
+            <br/>
+            {'a) This act shall be implemented at the beginning of the next fiscal year following its passage.'}
+            <br/><br/>
+            {'b) Teachers who meet the eligibility criteria will start receiving the 10% salary raise in the first pay cycle of the fiscal year.'}
+            <br/><br/>
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 6: Oversight and Reporting**
+            </Typography>
+            <br/>
+            {'The State Department of Education shall establish an oversight committee responsible for monitoring the implementation of this act. The committee shall provide an annual report to the state legislature, summarizing the number of teachers who received salary raises, the total allocated funds, and any challenges faced during implementation.'}
+
           </Typography>
         </Grid>
         <Grid item xs={12} style={{fontWeight: 'bold', lineHeight: '34px'}} >
@@ -138,9 +107,14 @@ const ContentInfo = () => {
         </Grid>
         <Grid item xs={12} >
           <Typography variant="body2" color="text.secondary" component={'div'}>
-            <MockChartData1 />
+            <MockChartData />
             <br/><br/>
-            <MockTextBlock />
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            **Section 7: Conclusion**
+            </Typography>
+            <br/>
+            {'The Teacher Salary Enhancement Act aims to recognize and reward the dedication and hard work of our educators by providing a 10% salary raise to eligible teachers. This legislation seeks to improve teacher retention, motivation, and ultimately, the quality of education for all students.'}
+            <br/><br/>
           </Typography>
         </Grid>
     </Grid>
@@ -166,39 +140,49 @@ const Quiz = () => {
   const quizSettings = {
     questions: [
       {
-        question: 'What percentage Jobbik want to increase teachers salary?',
-        options: ['5%', '8%', '20%', '10%'],
-        correctAnswer: '10%',
+        question: 'What is the primary purpose of the Teacher Salary Enhancement Act?',
+        options: [
+          'a) To reduce the number of teachers in schools',
+          'b) To provide a fair and transparent mechanism for eligible teachers to receive a 10% salary raise',
+          'c) To allocate funds for non-educational purposes',
+          'd) To require teachers to complete additional training',
+        ],
       },
       {
-        question: 'Roughly how many teachers are affected by this raise?',
-        options: ['200 thousand', '150 thousand', '55 thousand', '130 thousand'],
-        correctAnswer: '130 thousand',
+        question: 'Which of the following criteria must a teacher meet to be eligible for the 10% salary raise?',
+        options: [
+          'a) Hold a valid teaching certificate or license',
+          'b) Have completed at least one year of service as a teacher',
+          'c) Be employed as a part-time teacher',
+          'd) Work in any educational institution, regardless of accreditation',
+        ],
       },
       {
-        question: 'What is the maximum gross salary a primary school teacher can have after 15 years of work?',
-        options: ['158 000', '274 000', '480 000', '322 000'],
-        correctAnswer: '322 000',
+        question: 'What is the responsibility of the designated committee in the application process?',
+        options: [
+          'a) Reviewing and verifying teacher eligibility',
+          'b) Distributing funds to teachers',
+          'c) Teaching in the classroom',
+          'd) Setting the eligibility criteria',
+        ],
       },
       {
-        question: 'What is the forecasted teacher shortage we face in 2024?',
-        options: ['40 0000', '22 000', '34 000', '81 000'],
-        correctAnswer: '22 000',
+        question: 'Where will the funding for the 10% salary raise be allocated from?',
+        options: [
+          'a) Teacher salaries',
+          'b) The state\'s education budget',
+          'c) Teacher retirement funds',
+          'd) Private donations',
+        ],
       },
       {
-        question: 'Compared to average gross wage, teachers earn less or more in average?',
-        options: ['less', 'more', 'almost equal'],
-        correctAnswer: 'less',
-      },
-      {
-        question: 'How many hours a day a high school teacher works if extra non work related activites incloded?',
-        options: ['8', '6', '9', '12'],
-        correctAnswer: '12',
-      },
-      {
-        question: 'How earns the less?',
-        options: ['janitor', 'teacher', 'mechanican', 'operator'],
-        correctAnswer: 'teacher',
+        question: 'When will eligible teachers start receiving the 10% salary raise under this act?',
+        options: [
+          'a) In the middle of the fiscal year',
+          'b) In the second pay cycle of the fiscal year',
+          'c) In the first pay cycle of the fiscal year',
+          'd) At the end of the fiscal year',
+        ],
       },
     ],
   }
@@ -285,7 +269,7 @@ export default function VotingInfo({
   orgInfo: any,
 }) {
   return (
-    <Card sx={{ maxWidth: '100%', margin: '2% 2% 0px' }}>
+    <Card sx={{ maxWidth: '100%', margin: { sx: '10px 10px 0px', md: '40px 40px 0px', lg: '40px 40px 0px' }}}>
       <CardContent>
         <Stack spacing={1}>
           <HeaderInfo orgInfo={orgInfo} />
