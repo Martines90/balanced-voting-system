@@ -20,7 +20,8 @@ import ScrollToTop from 'helpers/ScrollToTop';
 const theme = createTheme({
   components: {
     MuiCssBaseline: {
-      styleOverrides: {
+      styleOverrides:
+      {
         root: {
 
         },

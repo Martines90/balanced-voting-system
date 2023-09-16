@@ -1,7 +1,7 @@
 {
-  "name": "react-mui-ts-template",
+  "name": "balanced-voting-system",
   "version": "0.1.0",
-  "description": "React, MUI and TypeScript template",
+  "description": "Balanced Voting System",
   "private": false,
   "homepage": "./",
   "keywords": [
