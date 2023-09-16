@@ -1,10 +1,11 @@
 // Local imports
 import Stack from '@mui/material/Stack';
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import VotingScoreFormula from 'components/common/VotingScoreFormula';
 
 import voting_box_pics from 'assets/voting_out_of_date_v3.png';
+import { Link } from 'react-router-dom';
 
 // Component definition
 function HomePage() {
@@ -25,8 +26,9 @@ function HomePage() {
        {'It is no coincidence that a country can only afford such a fad every 4 years at most. After all, no one really wants a happy unhappy person to decide on any issue without knowledge, competence or the necessary skills. And the average voter, beyond a few propaganda speeches, does not really have a deep knowledge of the subject and the issues of the vote. And then, of course, there are those who, although they are informed, do so within their own information bubble, so that their opinions are often not, or only partially, objective.'}
 <br/><br/>
       {`
-      It is precisely the search for solutions to these legitimate concerns and the belief in democracy that gave birth to the Weighted Voting System model.
-       `}
+      It is precisely the search for solutions to these legitimate concerns and the belief in democracy that gave birth to the `}
+      <span style={{fontWeight: 'bold'}}>Weighted Voting System</span> model.
+
     </Typography>
 
     <Typography variant="h3" component={'div'} textAlign={'center'}>
@@ -55,7 +57,7 @@ function HomePage() {
 
       <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
       <Typography variant="body1" fontWeight={'bold'} component={'div'} textAlign={'left'}>
-      {'This new voting model guarantees:'}
+      {'The Weighted Voting System guarantees:'}
       </Typography>
       <br/>
       <ul style={{textAlign: 'left'}}>
@@ -100,7 +102,22 @@ function HomePage() {
       <li>A citizen can have a maximum of 100 point voting score related to one specific voting event</li>
     </ul>
     </Typography>
-
+    <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
+    {'This demo of the Weighted Voting System contains the below modules:'}
+    <br/><br/>
+    <ul style={{textAlign: 'left'}}>
+      <li><Button component={Link} target="_blank" to={'/votings'} size="small" >Voting pool (example)</Button> - Here voter can see upcoming actual/upcoming/closed votings</li>
+      <li><Button component={Link} target="_blank" to={'/voting'} size="small" >Voting action screen (example)</Button> - Here is the view how an ongoing voting action interface look like</li>
+      <li><Button component={Link} target="_blank" to={'/voting-topic'} size="small" >Voting info screen (example)</Button> - Here is an example view how a voter can read an actual voting</li>
+      <li><Button component={Link} target="_blank" to={'/article'} size="small" >Article/critics (example)</Button> - This is an example article what will be assigned to votings by different authors</li>
+    </ul>
+    </Typography>
+    <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
+      {'This voting model concept is completely free to use. Me the author and the creator of this idea declare that I waive all my copyright.'}
+      </Typography>
+    <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
+    {'Contact me: hmartonsandor@gmail.com'}
+    </Typography>
 
     </Stack>
   );
