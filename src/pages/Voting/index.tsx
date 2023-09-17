@@ -17,6 +17,7 @@ import avatar3 from 'assets/profiles/author/avatar3.png'
 import avatar4 from 'assets/profiles/author/avatar4.png'
 import avatar5 from 'assets/profiles/author/avatar5.png'
 import avatar6 from 'assets/profiles/author/avatar6.png'
+import { Typography } from '@mui/material';
 
 function VotingPage() {
   return (
@@ -32,6 +33,11 @@ function VotingPage() {
       </Grid>
       <Grid item xs={5} marginLeft={'2%'}>
         <Grid container rowGap={2}>
+        <Grid item textAlign={'center'} xs={12}>
+          <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+            Pro articles
+          </Typography>
+        </Grid>
           <Grid item xs={12}>
             <ArticleIntro
               type='pro'
@@ -86,6 +92,11 @@ function VotingPage() {
       </Grid>
       <Grid item xs={5} marginRight={'2%'}>
         <Grid container rowGap={2}>
+          <Grid item xs={12} textAlign={'center'}>
+            <Typography variant="body1" style={{fontWeight: 'bold', lineHeight: '34px'}}  color="text.primary" component={'div'}>
+              Con articles
+            </Typography>
+          </Grid>
             <Grid item>
               <ArticleIntro
                 type='con'

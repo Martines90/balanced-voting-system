@@ -1,6 +1,6 @@
 // Local imports
 import Stack from '@mui/material/Stack';
-import { Button, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import VotingScoreFormula from 'components/common/VotingScoreFormula';
 
@@ -10,8 +10,30 @@ import { Link } from 'react-router-dom';
 // Component definition
 function HomePage() {
   return (
-    <Stack fontFamily={'Arial'} spacing={4} pt={2} pl={10} pr={10} justifyContent={'center'} textAlign={'center'} width={'100%'}>
-    <img src={voting_box_pics} style={{width: 'calc(100% + 160px)', marginTop: '-16px', marginLeft: '-80px'}} />
+    <Stack fontFamily={'Arial'}
+      spacing={4}
+      pt={2} pl={{xs: 2, sx: 2, sm: 2, md: 8, lg: 10}} pr={{xs: 2, sx: 2, sm: 2, md: 8, lg: 10}}
+      justifyContent={'center'} textAlign={'center'} width={'100%'}>
+
+      <Box sx={{
+        width: {
+          xs: 'calc(100% + 32px)',
+          sx: 'calc(100% + 32px)',
+          sm: 'calc(100% + 32px)',
+          md: 'calc(100% + 128px)',
+          lg: 'calc(100% + 160px)',
+        },
+        marginTop: '-16px',
+        marginLeft: {
+          xs: '-16px',
+          sx: '-16px',
+          sm: '-16px',
+          md: '-64px',
+          lg: '-80px',
+        }}}
+        component="img" src={voting_box_pics}>
+
+  </Box>
     <h4 style={{fontSize: 'x-large', fontWeight: 'normal'}}>{'The institution of voting as the dinosaur 🦖 of our time'}</h4>
     <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
       {'A 2,500-year-old system that works essentially as it did in ancient Greece. Although one of the main symbols of freedom of expression in democracies is the right to vote, but sadly the technicalities of the practice of this right make it virtually impossible for citizens to apply any meaningful control, influence or pressure on their elected leaders through the weight of their votes.'}
