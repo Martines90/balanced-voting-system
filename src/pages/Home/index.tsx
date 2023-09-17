@@ -114,7 +114,11 @@ function HomePage() {
     </Typography>
     <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
       {'This voting model concept is completely free to use. Me the author and the creator of this idea declare that I waive all my copyright.'}
+      <br/><br/>
+      <Button component={Link} target="_blank" to={'https://github.com/Martines90/balanced-voting-system'} size="small" >GITHUB repo</Button>
       </Typography>
+
+
     <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
     {'Contact me: hmartonsandor@gmail.com'}
     </Typography>
