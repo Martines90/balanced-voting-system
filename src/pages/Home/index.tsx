@@ -12,10 +12,7 @@ function HomePage() {
   return (
     <Stack fontFamily={'Arial'} spacing={4} pt={2} pl={10} pr={10} justifyContent={'center'} textAlign={'center'} width={'100%'}>
     <img src={voting_box_pics} style={{width: 'calc(100% + 160px)', marginTop: '-16px', marginLeft: '-80px'}} />
-    <h4 style={{fontSize: 'x-large', fontWeight: 'normal'}}>{'The institution of voting as the dinosaur of our time'}</h4>
-    {/*<Typography variant="h3" component={'div'} textAlign={'center'}>
-      <EmojiPeopleIcon fontSize='inherit' color='error' />≠<EmojiPeopleIcon fontSize='inherit' color='success' />
-  </Typography>*/}
+    <h4 style={{fontSize: 'x-large', fontWeight: 'normal'}}>{'The institution of voting as the dinosaur 🦖 of our time'}</h4>
     <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
       {'A 2,500-year-old system that works essentially as it did in ancient Greece. Although one of the main symbols of freedom of expression in democracies is the right to vote, but sadly the technicalities of the practice of this right make it virtually impossible for citizens to apply any meaningful control, influence or pressure on their elected leaders through the weight of their votes.'}
        <br/><br/>
@@ -31,6 +28,25 @@ function HomePage() {
 
     </Typography>
 
+
+    <Typography variant="h3" component={'div'} textAlign={'center'}>
+      <EmojiPeopleIcon fontSize='inherit' color='error' />≠<EmojiPeopleIcon fontSize='inherit' color='success' />
+  </Typography>
+      <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
+      <Typography variant="body1" fontWeight={'bold'} component={'div'} textAlign={'left'}>
+      {'The Weighted Voting System guarantees:'}
+      </Typography>
+      <br/>
+      <ul style={{textAlign: 'left'}}>
+      <li>{'The voter is sufficiently informed about the subject and the issues to be voted on'}</li>
+      <li>{'The voter is aware of several different pro and con positions on the vote before casting his/her vote.'}</li>
+      <li>{'The value of the voter\'s vote will be determined by the extent to which he or she is aware of different expert critical content surrounding the subject of the vote.'}</li>
+      <li>{'In addition, other factors can increase/decrease the value of a vote, such as: location, education, level of involvement (gender, age, religion).'}</li>
+      <li>{'Practice continuous (weekly or even daily) control over the activities of decision-makers in the form of online voting.'}</li>
+      </ul>
+      <br/>
+      {'The aim is for citizens to be truly equal partners, even bosses, to their politicians, but above all to be governed by reason and common sense.'}
+    </Typography>
     <Typography variant="h3" component={'div'} textAlign={'center'}>
       <Stack direction="row" spacing={3} justifyContent={'center'}>
         <Stack alignContent={'center'} textAlign={'center'}>
@@ -52,31 +68,20 @@ function HomePage() {
         </Typography>
       </Stack>
     </Typography>
-
-
-
-      <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
-      <Typography variant="body1" fontWeight={'bold'} component={'div'} textAlign={'left'}>
-      {'The Weighted Voting System guarantees:'}
-      </Typography>
-      <br/>
-      <ul style={{textAlign: 'left'}}>
-      <li>{'The voter is sufficiently informed about the subject and the issues to be voted on'}</li>
-      <li>{'The voter is aware of several different pro and con positions on the vote before casting his/her vote.'}</li>
-      <li>{'The value of the voter\'s vote will be determined by the extent to which he or she is aware of different expert critical content surrounding the subject of the vote.'}</li>
-      <li>{'In addition, other factors can increase/decrease the value of a vote, such as: location, education, level of involvement (gender, age, religion).'}</li>
-      <li>{'Practice continuous (weekly or even daily) control over the activities of decision-makers in the form of online voting.'}</li>
-      </ul>
-      <br/>
-      {'The aim is for citizens to be truly equal partners, even bosses, to their politicians, but above all to be governed by reason and common sense.'}
-    </Typography>
-
     <Typography variant="body2" component={'div'} textAlign={'left'}>
     <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
     {'The vote value calculated the following way:'}
     </Typography>
     <br/>
     <>
+    Formula: (<span style={{color: 'green', fontWeight: 'bold'}}>p</span>*📝) * (<span style={{color: 'red', fontWeight: 'bold'}}>c</span>*📝) * 1.0 = your voting score 🗳
+    <br/><br/>
+    Advenced formula: (p*📝) * (c*📝) * (🎓/🌐) * 1.0 = your voting score 🗳
+    <br/><br/>
+    <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
+    {'Detailed exmplanation of formula:'}
+    </Typography>
+    <br/>
     <span style={{color: 'green', fontWeight: 'bold', textDecoration: 'underline'}}>
       {`The sum score (max 10.0) of any supportive/pro articles written by journalists, publicists,
       experts read & understood by the voter`}<br/>
@@ -84,7 +89,10 @@ function HomePage() {
     <span style={{color: 'red', fontWeight: 'bold', textDecoration: 'underline'}}>
       {`The sum score (max 10.0) of any critical/contraversive articles written by journalists, publicists,
       experts read & understood by the voter`}</span><br/>
-
+      multiplied by&nbsp;<br/>
+<span style={{color: 'blue', fontWeight: 'bold', textDecoration: 'underline'}}>
+      {'(optional) A fix score based on the level of your exposure (1-100)'}<br/>
+    </span>
   multiplied by&nbsp;<br/>
     <span style={{color: '#1976d2', fontWeight: 'bold', textDecoration: 'underline'}}>
       voting topic completed score (1.0)
@@ -99,7 +107,7 @@ function HomePage() {
     <ul style={{textAlign: 'left'}}>
       <li>Pro and contra articles can be published / assigned to one specific voting topic only</li>
       <li>The reading and understanding of these articles are validated by quiz</li>
-      <li>A citizen can have a maximum of 100 point voting score related to one specific voting event</li>
+      <li>A citizen can have a maximum of 100 (or 1000) point voting score related to one specific voting event</li>
     </ul>
     </Typography>
     <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>

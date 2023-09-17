@@ -74,7 +74,7 @@ function MenuAppBar() {
               textDecoration: 'none',
             }}
           >
-            BVS (demo 1.0)
+            WVS (demo 1.0)
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -153,7 +153,7 @@ function MenuAppBar() {
               textDecoration: 'none',
             }}
           >
-            BVS
+            WVS
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
