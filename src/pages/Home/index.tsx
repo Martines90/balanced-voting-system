@@ -17,7 +17,7 @@ function HomePage() {
       <EmojiPeopleIcon fontSize='inherit' color='error' />≠<EmojiPeopleIcon fontSize='inherit' color='success' />
   </Typography>*/}
     <Typography variant="body2" color="text.secondary" component={'div'} textAlign={'left'}>
-      {'A 2,500-year-old system that works essentially as it did in ancient Greece. Although one of the main symbols of freedom of expression in democracies is the right to vote, the technicalities of the practice of this right make it virtually impossible for citizens to apply any meaningful control, influence or pressure on their elected leaders through the weight of their votes.'}
+      {'A 2,500-year-old system that works essentially as it did in ancient Greece. Although one of the main symbols of freedom of expression in democracies is the right to vote, but sadly the technicalities of the practice of this right make it virtually impossible for citizens to apply any meaningful control, influence or pressure on their elected leaders through the weight of their votes.'}
        <br/><br/>
        {'The current model of voting is an infinitely primitive system based on the fundamental pillar of one person = one vote'}
        <br/><br/>
