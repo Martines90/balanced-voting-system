@@ -7,6 +7,15 @@ import VotingScoreFormula from 'components/common/VotingScoreFormula';
 import voting_box_pics from 'assets/voting_out_of_date_v3.png';
 import { Link } from 'react-router-dom';
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
+import Paper from '@mui/material/Paper';
+
 // Component definition
 function HomePage() {
   return (
@@ -95,30 +104,60 @@ function HomePage() {
     {'The vote value calculated the following way:'}
     </Typography>
     <br/>
-    <>
-    Formula: (<span style={{color: 'green', fontWeight: 'bold'}}>p</span>*📝) * (<span style={{color: 'red', fontWeight: 'bold'}}>c</span>*📝) * 1.0 = your voting score 🗳
+    <h4>Formula:</h4>
+    <br/><span style={{color: 'green', fontWeight: 'bold'}}>p</span> = number of read <span style={{color: 'green', fontWeight: 'bold'}}>pro</span> articles
+    <br/><span style={{color: 'red', fontWeight: 'bold'}}>c</span> = number of read <span style={{color: 'red', fontWeight: 'bold'}}>con</span> articles
+    <br/>k = number of pro and con article pairs
     <br/><br/>
-    Advenced formula: (p*📝) * (c*📝) * (🎓/🌐) * 1.0 = your voting score 🗳
+    5 * k📝 + 5 * (<span style={{color: 'green', fontWeight: 'bold'}}>p</span>📝 + <span style={{color: 'red', fontWeight: 'bold'}}>p</span>📝 - 2 * k📝) = your voting score 🗳
     <br/><br/>
-    <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
-    {'Detailed exmplanation of formula:'}
-    </Typography>
+    <h4>Examples:</h4>
     <br/>
-    <span style={{color: 'green', fontWeight: 'bold', textDecoration: 'underline'}}>
-      {`The sum score (max 10.0) of any supportive/pro articles written by journalists, publicists,
-      experts read & understood by the voter`}<br/>
-    </span>multiplied by&nbsp;<br/>
-    <span style={{color: 'red', fontWeight: 'bold', textDecoration: 'underline'}}>
-      {`The sum score (max 10.0) of any critical/contraversive articles written by journalists, publicists,
-      experts read & understood by the voter`}</span><br/>
-      multiplied by&nbsp;<br/>
-<span style={{color: 'blue', fontWeight: 'bold', textDecoration: 'underline'}}>
-      {'(optional) A fix score based on the level of your exposure (1-100)'}<br/>
-    </span>
-  multiplied by&nbsp;<br/>
-    <span style={{color: '#1976d2', fontWeight: 'bold', textDecoration: 'underline'}}>
-      voting topic completed score (1.0)
-    </span>&nbsp;
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Pro article (n read)</TableCell>
+            <TableCell>Con article (m read)</TableCell>
+            <TableCell>Score calculation</TableCell>
+            <TableCell>Voting score</TableCell>
+          </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+            <TableCell>1</TableCell>
+            <TableCell>1</TableCell>
+            <TableCell>5 * 5=</TableCell>
+            <TableCell>25</TableCell>
+        </TableRow>
+        <TableRow>
+            <TableCell>3</TableCell>
+            <TableCell>0</TableCell>
+            <TableCell>5 + 5 + 5=</TableCell>
+            <TableCell>15</TableCell>
+        </TableRow>
+        <TableRow>
+            <TableCell>0</TableCell>
+            <TableCell>2</TableCell>
+            <TableCell>5 + 5=</TableCell>
+            <TableCell>10</TableCell>
+        </TableRow>
+        <TableRow>
+            <TableCell>2</TableCell>
+            <TableCell>2</TableCell>
+            <TableCell>(5 * 5) + (5 * 5)=</TableCell>
+            <TableCell>50</TableCell>
+        </TableRow>
+        <TableRow>
+            <TableCell>3</TableCell>
+            <TableCell>1</TableCell>
+            <TableCell>(5 * 5) + 5 + 5=</TableCell>
+            <TableCell>35</TableCell>
+        </TableRow>
+      </TableBody>
+      </Table>
+    </TableContainer>
+    <>
   </>
   <br/>
   <br/>
@@ -129,7 +168,7 @@ function HomePage() {
     <ul style={{textAlign: 'left'}}>
       <li>Pro and contra articles can be published / assigned to one specific voting topic only</li>
       <li>The reading and understanding of these articles are validated by quiz</li>
-      <li>A citizen can have a maximum of 100 (or 1000) point voting score related to one specific voting event</li>
+      <li>A citizen can have a maximum of 100 point voting score related to one specific voting event</li>
     </ul>
     </Typography>
     <Typography variant="body1" color="text.secondary"  fontWeight={'bold'} component={'div'} textAlign={'left'}>
