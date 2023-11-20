@@ -32,6 +32,10 @@ const pages = [
     text: 'article (example)',
     href: '/article',
   },
+  {
+    text: 'FAQ',
+    href: '/faq',
+  },
 ]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 

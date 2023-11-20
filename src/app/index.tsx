@@ -16,6 +16,7 @@ import VotingPage from 'pages/Voting';
 import VoteTopicPage from 'pages/VotingTopic';
 import ArticlePage from 'pages/Article';
 import ScrollToTop from 'helpers/ScrollToTop';
+import FAQ from 'pages/FAQ';
 
 const theme = createTheme({
   components: {
@@ -52,6 +53,7 @@ function App() {
             <Route path="voting" element={<VotingPage />} />
             <Route path="voting-topic" element={<VoteTopicPage />} />
             <Route path="article" element={<ArticlePage />} />
+            <Route path="faq" element={<FAQ />} />
           </Routes>
         </Box>
       </Container>
